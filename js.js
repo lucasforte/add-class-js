@@ -11,3 +11,17 @@ function menuMob(id, active) { //parameters for element id and active class
         menu.classList.add(activeClass);
     }
 } 
+
+// change class on window scroll
+window.onscroll = function changeNav(id, active) {
+    const navBar = document.getElementById(id);
+    const activeClass = active;
+    let scrollPosY = window.pageYOffset | document.body.scrollTop;
+    let userInnerh = window.innerHeight;
+    
+    if(scrollPosY > (userInnerh * 0.65)) {
+        navBar.classList.add(activeClass);
+    } else if(scrollPosY <= (userInnerh * 0.65)) {
+        navBar.classList.remove(activeClass);
+    }
+}
