@@ -1,5 +1,4 @@
 //click function to manipulate a class of a element
-
 function menuMob(id, active) { //parameters for element id and active class
     event.preventDefault(); //prevent default click
     let menu = document.getElementById(id); //capture de element id
